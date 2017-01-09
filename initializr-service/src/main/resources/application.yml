@@ -90,21 +90,21 @@ initializr:
           id: security
           description: Secure your application via spring-security
           weight: 100
-        - name: AOP
-          id: aop
-          description: Aspect-oriented programming including spring-aop and AspectJ
+#        - name: AOP
+#          id: aop
+#          description: Aspect-oriented programming including spring-aop and AspectJ
         - name: Atomikos (JTA)
           id: jta-atomikos
           description: JTA distributed transactions via Atomikos
           versionRange: 1.2.0.M1
-        - name: Bitronix (JTA)
-          id: jta-bitronix
-          description: JTA distributed transactions via Bitronix
-          versionRange: 1.2.0.M1
-        - name: Narayana (JTA)
-          id: jta-narayana
-          description: JTA distributed transactions via Narayana
-          versionRange: 1.4.0.M2
+#        - name: Bitronix (JTA)
+#          id: jta-bitronix
+#          description: JTA distributed transactions via Bitronix
+#          versionRange: 1.2.0.M1
+#        - name: Narayana (JTA)
+#          id: jta-narayana
+#          description: JTA distributed transactions via Narayana
+#          versionRange: 1.4.0.M2
         - name: Cache
           id: cache
           description: Spring's Cache abstraction
@@ -154,6 +154,7 @@ initializr:
               version: 1.16.6
           starter: false
     - name: Web
+    ## incluir swagger - will be a dependency
       content:
         - name: Web
           id: web
@@ -255,14 +256,14 @@ initializr:
             - web
           keywords:
             - template
-        - name: Mustache
-          id: mustache
-          description: Mustache templating engine
-          versionRange: 1.2.2.RELEASE
-          facets:
-            - web
-          keywords:
-            - template
+#        - name: Mustache
+#          id: mustache
+#          description: Mustache templating engine
+#          versionRange: 1.2.2.RELEASE
+#          facets:
+#            - web
+#          keywords:
+#            - template
     - name: SQL
       content:
         - name: JPA
@@ -271,20 +272,20 @@ initializr:
           weight: 100
           aliases:
             - jpa
-        - name: JOOQ
-          id: jooq
-          description: Persistence support using Java Object Oriented Querying
-          versionRange: 1.3.0.M2
-        - name: MyBatis
-          id: mybatis
-          description: Persistence support using MyBatis
-          groupId: org.mybatis.spring.boot
-          artifactId: mybatis-spring-boot-starter
-          mappings:
-            - versionRange: "[1.3.0.RELEASE,1.4.0.M2)"
-              version: 1.1.1
-            - versionRange: 1.4.0.M2
-              version: 1.2.0
+#        - name: JOOQ
+#          id: jooq
+#          description: Persistence support using Java Object Oriented Querying
+#          versionRange: 1.3.0.M2
+#        - name: MyBatis
+#          id: mybatis
+#          description: Persistence support using MyBatis
+#          groupId: org.mybatis.spring.boot
+#          artifactId: mybatis-spring-boot-starter
+#          mappings:
+#            - versionRange: "[1.3.0.RELEASE,1.4.0.M2)"
+#              version: 1.1.1
+#            - versionRange: 1.4.0.M2
+#              version: 1.2.0
         - name: JDBC
           id: jdbc
           description: JDBC databases
@@ -310,23 +311,23 @@ initializr:
 #          scope: runtime
 #          versionRange: 1.2.2.RELEASE
 #          starter: false
-        - name: MySQL
-          id: mysql
-          description: MySQL jdbc driver
-          groupId: mysql
-          artifactId: mysql-connector-java
-          scope: runtime
-          starter: false
-        - name: PostgreSQL
-          id: postgresql
-          description: PostgreSQL jdbc driver
-          groupId: org.postgresql
-          artifactId: postgresql
-          mappings:
-            - versionRange: "[1.2.0.RELEASE,1.3.0.M1)"
-              version: 9.4-1201-jdbc41
-          scope: runtime
-          starter: false
+#        - name: MySQL
+#          id: mysql
+#          description: MySQL jdbc driver
+#          groupId: mysql
+#          artifactId: mysql-connector-java
+#          scope: runtime
+#          starter: false
+#        - name: PostgreSQL
+#          id: postgresql
+#          description: PostgreSQL jdbc driver
+#          groupId: org.postgresql
+#          artifactId: postgresql
+#          mappings:
+#            - versionRange: "[1.2.0.RELEASE,1.3.0.M1)"
+#              version: 9.4-1201-jdbc41
+#          scope: runtime
+#          starter: false
         - name: SQL Server
           id: sqlserver
           description: Microsoft SQL Server jdbc driver
@@ -335,12 +336,12 @@ initializr:
           artifactId: mssql-jdbc
           scope: runtime
           starter: false
-        - name: Flyway
-          id: flyway
-          description: Flyway Database Migrations library
-          groupId: org.flywaydb
-          artifactId: flyway-core
-          starter: false
+#        - name: Flyway
+#          id: flyway
+#          description: Flyway Database Migrations library
+#          groupId: org.flywaydb
+#          artifactId: flyway-core
+#          starter: false
 #        - name: Liquibase
 #          id: liquibase
 #          description: Liquibase Database Migrations library
@@ -365,16 +366,16 @@ initializr:
           id: data-neo4j
           description: Neo4j NoSQL graph database, including spring-data-neo4j
           versionRange: 1.4.0.M2
-        - name: Redis
-          id: data-redis
-          description: REDIS key-value data store, including spring-redis
-          aliases:
-            - redis
-          mappings:
-            - versionRange: 1.4.0.M1
-              artifactId: spring-boot-starter-data-redis
-            - versionRange: "[1.1.5.RELEASE,1.4.0.M1)"
-              artifactId: spring-boot-starter-redis
+#        - name: Redis
+#          id: data-redis
+#          description: REDIS key-value data store, including spring-redis
+#          aliases:
+#            - redis
+#          mappings:
+#            - versionRange: 1.4.0.M1
+#              artifactId: spring-boot-starter-data-redis
+#            - versionRange: "[1.1.5.RELEASE,1.4.0.M1)"
+#              artifactId: spring-boot-starter-redis
         - name: Gemfire
           id: data-gemfire
           description: GemFire distributed data store including spring-data-gemfire
@@ -523,11 +524,11 @@ initializr:
       bom: cloud-bom
       versionRange: 1.3.0.M4
       content:
-        - name: Sleuth
-          id: cloud-starter-sleuth
-          description: Distributed tracing via logs with spring-cloud-sleuth
-          groupId: org.springframework.cloud
-          artifactId: spring-cloud-starter-sleuth
+#        - name: Sleuth
+#          id: cloud-starter-sleuth
+#          description: Distributed tracing via logs with spring-cloud-sleuth
+#          groupId: org.springframework.cloud
+#          artifactId: spring-cloud-starter-sleuth
         - name: Zipkin Client
           id: cloud-starter-zipkin
           description: Distributed tracing with an existing Zipkin installation and spring-cloud-sleuth-zipkin. Alternatively, consider Sleuth Stream.
@@ -621,21 +622,21 @@ initializr:
       bom: cloud-bom
       versionRange: 1.3.0.M4
       content:
-        - name: Cluster Redis
-          id: cloud-cluster-redis
-          description: Leadership election and global state with Redis and spring-cloud-cluster-redis
-          groupId: org.springframework.cloud
-          artifactId: spring-cloud-cluster-redis
+#        - name: Cluster Redis
+#          id: cloud-cluster-redis
+#          description: Leadership election and global state with Redis and spring-cloud-cluster-redis
+#          groupId: org.springframework.cloud
+#          artifactId: spring-cloud-cluster-redis
         - name: Cluster Zookeeper
           id: cloud-cluster-zookeeper
           description: Leadership election and global state with Zookeeper and spring-cloud-cluster-zookeeper
           groupId: org.springframework.cloud
           artifactId: spring-cloud-cluster-zookeeper
-        - name: Cluster Hazelcast
-          id: cloud-cluster-hazelcast
-          description: Leadership election and global state with Hazelcast and spring-cloud-cluster-hazelcast
-          groupId: org.springframework.cloud
-          artifactId: spring-cloud-cluster-hazelcast
+#        - name: Cluster Hazelcast
+#          id: cloud-cluster-hazelcast
+#          description: Leadership election and global state with Hazelcast and spring-cloud-cluster-hazelcast
+#          groupId: org.springframework.cloud
+#          artifactId: spring-cloud-cluster-hazelcast
         - name: Cluster Etcd
           id: cloud-cluster-etcd
           description: Leadership election and global state with Etcd and spring-cloud-cluster-etcd
